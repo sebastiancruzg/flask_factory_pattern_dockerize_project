@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "new react folder and files",
+        "type": "shell",
+        "command": "mkdir -p app/main/features/${input:dirName} && touch app/main/features/${input:dirName}/controller.py app/main/features/${input:dirName}/dto.py app/main/features/${input:dirName}/helpers.py app/main/features/${input:dirName}/service.py app/main/features/${input:dirName}/model.py",
+        "problemMatcher": [],
+        "presentation": {
+          "echo": false,
+          "reveal": "silent",
+          "focus": false,
+          "panel": "shared",
+          "showReuseMessage": false,
+          "clear": true
+        }
+      }
+    ],
+    "inputs": [
+      {
+        "type": "promptString",
+        "id": "dirName",
+        "description": "Complete my folder name",
+        "default": "feature folder"
+      }
+    ]
+}
